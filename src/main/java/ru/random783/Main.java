@@ -7,33 +7,37 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int a, b;
+        int a;
+        long b;
         final long full = 4147483647L;
-        a=b=0;
-        double d,c;
-        d=c=0.0;
+        a=0;
+        b=0;
+        double d;
+        float c;
+        c=0.0f;
+        d = 0.0;
         Scanner in = new Scanner(System.in);
         System.out.println("enter two integer numbers");
         a = in.nextInt();
-        b = in.nextInt();
+        b = in.nextLong();
         System.out.println("enter one floating number");
         d = in.nextDouble();
 
         // integer operations
-        System.out.println("a+b="+Integer.toString(a+b));
-        System.out.println("a-b="+Integer.toString(a-b));
+        System.out.println("a+b="+Long.toString(a+b));
+        System.out.println("a-b="+Long.toString(a-b));
         if (b!=0) {
-            System.out.println("a/b=" + Integer.toString(a / b));
-            System.out.println("a%b=" + Integer.toString(a % b));
+            System.out.println("a/b=" + Long.toString(a / b));
+            System.out.println("a%b=" + Long.toString(a % b));
         }
         else if (a!= 0) {
-            System.out.println("b/a=" + Integer.toString(b / a));
-            System.out.println("b%a=" + Integer.toString(b % a));
+            System.out.println("b/a=" + Long.toString(b / a));
+            System.out.println("b%a=" + Long.toString(b % a));
         }
         else {
             System.out.println("dividing by 0 is forbidden");
         }
-        System.out.println("a*b=" + Integer.toString(a * b));
+        System.out.println("a*b=" + Long.toString(a * b));
 
         //double operations
         System.out.println("a+d="+Double.toString(a+d));
@@ -64,8 +68,33 @@ public class Main {
             }
         }
 
-        //overload
+        //overload right
         a+=full;
         System.out.println("overfilled a = "+a);
+        d +=Double.MAX_VALUE;
+        System.out.println("overfilled d ="+d);
+        b+=Long.MAX_VALUE;
+        System.out.println("overfilled b= "+b);
+        c=15+Float.MAX_VALUE;
+        System.out.println("overfilled c= "+c);
+        //overload left
+        a=-a+Integer.MIN_VALUE;
+        System.out.println("overfilled a = "+a);
+        d =-d-Double.MAX_VALUE;
+        System.out.println("overfilled d ="+d);
+        b=-b+Long.MIN_VALUE;
+        System.out.println("overfilled b= "+b);
+        c=-Float.MAX_VALUE-15;
+        System.out.println("overfilled c= "+c);
+
+        //max min values
+        System.out.println("Double max value="+Double.MAX_VALUE);
+        System.out.println("Double min value="+Double.MIN_VALUE);
+        System.out.println("Float max value="+Float.MAX_VALUE);
+        System.out.println("Float min value="+Float.MIN_VALUE);
+        System.out.println("Long max value="+Long.MAX_VALUE);
+        System.out.println("Long min value="+Long.MIN_VALUE);
+        System.out.println("Int max value="+Integer.MAX_VALUE);
+        System.out.println("Int min value="+Integer.MIN_VALUE);
     }
 }
