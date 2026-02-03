@@ -9,7 +9,6 @@ public class Main {
 
         int a;
         long b;
-        final long full = 4147483647L;
         a=0;
         b=0;
         double d;
@@ -69,24 +68,23 @@ public class Main {
         }
 
         //overload right
-        a+=full;
+        a=Integer.MAX_VALUE+15;
         System.out.println("overfilled a = "+a);
-        d +=Double.MAX_VALUE;
+        d +=Double.MAX_VALUE*2;
         System.out.println("overfilled d ="+d);
-        b+=Long.MAX_VALUE;
+        b+=Long.MAX_VALUE+15;
         System.out.println("overfilled b= "+b);
-        c=15+Float.MAX_VALUE;
+        c=15+Float.MAX_VALUE*2;
         System.out.println("overfilled c= "+c);
         //overload left
-        a=-a+Integer.MIN_VALUE;
-        System.out.println("overfilled a = "+a);
-        d =-d-Double.MAX_VALUE;
-        System.out.println("overfilled d ="+d);
-        b=-b+Long.MIN_VALUE;
-        System.out.println("overfilled b= "+b);
-        c=-Float.MAX_VALUE-15;
-        System.out.println("overfilled c= "+c);
-
+        a=Integer.MIN_VALUE-15;
+        System.out.println("overfilled left a = "+a);
+        d =-Double.MAX_VALUE*2;
+        System.out.println("overfilled left d ="+d);
+        b=Long.MIN_VALUE-15;
+        System.out.println("overfilled left b= "+b);
+        c=-Float.MAX_VALUE*2;
+        System.out.println("overfilled left c= "+c);
         //max min values
         System.out.println("Double max value="+Double.MAX_VALUE);
         System.out.println("Double min value="+Double.MIN_VALUE);
