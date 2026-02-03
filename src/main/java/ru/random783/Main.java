@@ -85,7 +85,6 @@ public class Main {
         System.out.println("overfilled left b= "+b);
         c=-Float.MAX_VALUE*2;
         System.out.println("overfilled left c= "+c);
-
         //max min values
         System.out.println("Double max value="+Double.MAX_VALUE);
         System.out.println("Double min value="+Double.MIN_VALUE);
